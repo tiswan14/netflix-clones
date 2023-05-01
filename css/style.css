@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Volkhov:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+:root {
+  --text: #fef4f4;
+  --primary: #bc0e19;
+  --hover: #b4000c;
+}
+
+/* ALL This */
+h2 {
+  color: var(--text);
+  font-size: 38px;
+  font-weight: bold;
+  font-family: "Volkhov";
+}
+
+h3 {
+  font-size: 18px;
+  color: var(--text);
+  font-family: "Montserrat", sans-serif;
+}
+
+h4 {
+  color: var(--text);
+}
+button {
+  border: none;
+  color: var(--text);
+  background: var(--primary);
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 13px;
+  height: 40px;
+  width: 160px;
+}
+
+button:hover {
+  background: var(--hover);
+}
+
+/* End alk this */
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #1a1c22;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 80px;
+}
+
+.list ul {
+  display: flex;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 500;
+  gap: 24px;
+}
+
+.sign {
+  display: flex;
+  gap: 30px;
+}
+
+.sign .lang {
+  display: flex;
+  gap: 6px;
+}
+
+.sign .lang p {
+  font-style: 22px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.sign .lang img {
+  margin-top: 6px;
+  width: 18px;
+  height: 8px;
+}
+
+.sign button {
+  height: 35px;
+  width: 95px;
+  margin-top: -8px;
+}
+
+/* End Nav */
+
+/* Start The Con
+tent */
+
+.container {
+  display: flex;
+}
+
+.desc {
+  padding: 80px 130px;
+}
+
+.desc h1 {
+  color: var(--text);
+  font-size: 48px;
+  font-family: "Volkhov";
+  font-weight: bold;
+}
+
+.desc p {
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 12px;
+  width: 600px;
+}
+
+.desc button {
+  height: 42px;
+  width: 160px;
+  margin-top: 24px;
+}
+
+.spider {
+  margin-top: 40px;
+  background: #5064a0;
+  height: 450px;
+  width: 450px;
+  border-radius: 50px 50% 50% 200px;
+}
+
+.spider img {
+  width: 330px;
+  margin-left: 50px;
+  margin-top: 26px;
+}
+
+/* Service section*/
+
+.title h2 {
+  text-align: center;
+  margin-top: 180px;
+}
+
+.card {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.card .box {
+  background: #1f2127;
+  height: 250px;
+  width: 240px;
+  border-radius: 30px;
+  padding: 35px 15px;
+}
+
+.card .box img {
+  width: 60px;
+  height: 60px;
+}
+
+.card .box h3 {
+  font-size: 17px;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+.card .box p {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 300;
+  margin-top: 8px;
+}
+
+.adv {
+  display: flex;
+  justify-content: center;
+  margin-top: 175px;
+  gap: 110px;
+}
+
+.adv img {
+  width: 550px;
+  height: 450px;
+}
+
+.adv h2 {
+  width: 500px;
+  height: 200px;
+  margin-top: 130px;
+}
+
+.populer {
+  margin-top: 180px;
+  height: 100vh;
+}
+
+.populer h2 {
+  padding-left: 75px;
+}
+
+.populer .populer-month {
+  display: flex;
+  justify-content: space-between;
+}
+
+.populer .populer-month button {
+  margin-right: 80px;
+}
+
+.populer .card {
+  gap: 50px;
+}
+
+.populer .card .box {
+  width: 260px;
+  height: 287px;
+  border: 1px solid #e3e0e0;
+  margin-top: 40px;
+}
+
+.populer .card .box img {
+  margin-top: -19px;
+  width: 226px;
+  height: 139px;
+}
+
+.populer .card .box h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 14px;
+}
+
+.populer .card .box h4 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.populer .card .box .ratings {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.populer .card .box .ratings img {
+  height: 20px;
+  width: 20px;
+  margin-top: 3.4px;
+}
+
+/* End Populer */
+
+.paket {
+  height: 100vh;
+}
+
+.paket h2 {
+  text-align: center;
+}
+
+.paket .container {
+  justify-content: center;
+  gap: 40px;
+}
+
+.paket .container .list ul {
+  flex-direction: column;
+  gap: 16px;
+}
+.paket .card .box {
+  height: 600px;
+  width: 400px;
+}
+
+.paket .card .box h2 {
+  font-size: 25px;
+}
+
+.paket .card .box h3 {
+  text-align: center;
+  font-size: 30px;
+  color: var(--primary);
+}
+
+.paket .card .box span {
+  color: var(--text);
+  font-size: 16px;
+}
+.paket .card .box .wrapper {
+  display: flex;
+  margin-top: 24px;
+  gap: 12px;
+  padding: 0px 24px;
+}
+.paket .card .box .wrapper .list-checklist {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+}
+
+.paket .card .box .wrapper .list-checklist img {
+  height: 24px;
+  width: 24px;
+}
+
+.paket .card .box button {
+  margin: 60px 100px;
+}
