@@ -39,12 +39,16 @@ button {
   border-radius: 13px;
   height: 40px;
   width: 160px;
+  cursor: pointer;
 }
 
 button:hover {
   background: var(--hover);
 }
 
+li {
+  color: var(--text);
+}
 /* End alk this */
 
 body {
@@ -52,13 +56,19 @@ body {
   background: #1a1c22;
 }
 
-nav {
+nav .container {
   display: flex;
   justify-content: space-between;
   padding: 40px 80px;
 }
 
-.list ul {
+nav .row {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.row .list ul {
   display: flex;
   color: var(--text);
   font-size: 18px;
@@ -66,41 +76,76 @@ nav {
   gap: 24px;
 }
 
-.sign {
+.row {
   display: flex;
   gap: 30px;
 }
 
-.sign .lang {
+nav .row .sign {
   display: flex;
-  gap: 6px;
+  gap: 15px;
 }
 
-.sign .lang p {
+nav .row .sign .lang {
+  display: flex;
+}
+
+.row .sign .lang p {
   font-style: 22px;
   font-weight: 500;
   color: var(--text);
 }
 
-.sign .lang img {
+.row .sign .lang img {
   margin-top: 6px;
   width: 18px;
   height: 8px;
 }
 
-.sign button {
+.row .sign button {
+  margin-top: -6px;
   height: 35px;
   width: 95px;
-  margin-top: -8px;
 }
+
+/* HAMBURGER MENU */
+nav .menu {
+  display: none;
+}
+
+nav .menu .bar {
+  display: block;
+  width: 32px;
+  height: 4px;
+  border-radius: 4px;
+  margin: 7px 0;
+  background: var(--text);
+  transition: all 0.25s ease-in-out;
+}
+
+.change .bar1 {
+  transform: rotate(-45deg) translate(-9px, 8px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: rotate(45deg) translate(-8px, -6px);
+}
+/* HAMBURGER MENU */
 
 /* End Nav */
 
 /* Start The Con
 tent */
-
 .container {
   display: flex;
+}
+.hero .container {
+  display: flex;
+  width: 100%;
 }
 
 .desc {
@@ -153,6 +198,7 @@ tent */
   font-family: "Montserrat", sans-serif;
   margin-top: 25px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
 }
@@ -185,6 +231,7 @@ tent */
 
 .adv {
   display: flex;
+  flex-wrap: wrap-reverse;
   justify-content: center;
   margin-top: 175px;
   gap: 110px;
@@ -202,7 +249,7 @@ tent */
 }
 
 .populer {
-  margin-top: 180px;
+  margin-top: 60px;
   height: 100vh;
 }
 
@@ -272,12 +319,17 @@ tent */
 
 .paket .container {
   justify-content: center;
+  flex-wrap: wrap;
   gap: 40px;
 }
 
-.paket .container .list ul {
+.paket .container .card .box .list ul {
   flex-direction: column;
-  gap: 16px;
+}
+
+.paket .container .list ul li {
+  color: var(--text);
+  margin-bottom: 20px;
 }
 .paket .card .box {
   height: 600px;
@@ -317,4 +369,177 @@ tent */
 
 .paket .card .box button {
   margin: 60px 100px;
+}
+
+/* Langganan Section */
+.langganan {
+  margin-top: 180px;
+  display: flex;
+  justify-content: center;
+  height: 50vh;
+}
+
+.langganan .box {
+  height: 250px;
+  width: 1200px;
+  background: #c8cfec;
+  border-radius: 20px;
+  position: relative;
+}
+
+.langganan .box h3 {
+  text-align: center;
+  color: #1a1c22;
+  margin-top: 66px;
+  font-size: 20px;
+}
+
+.langganan .box .email {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.langganan .box input {
+  height: 40px;
+  width: 300px;
+  background: #fef4f4;
+  border: none;
+  border-radius: 10px;
+  padding-left: 20px;
+  color: #1a1c22;
+  outline: none;
+}
+
+.langganan .box input::placeholder {
+  font-size: 14px;
+}
+
+.langganan .circle {
+  background: #1a1c22;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  right: -10px;
+  margin-top: -5px;
+}
+
+.langganan img {
+  position: absolute;
+  right: -10px;
+}
+
+footer .container {
+  justify-content: space-evenly;
+  padding: 48px 80px;
+}
+
+footer h3 {
+  margin-bottom: 24px;
+}
+footer .footer-netflix p {
+  color: var(--text);
+  width: 400px;
+  font-size: 14px;
+}
+
+footer ul li a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.hak-cipta .container {
+  color: var(--text);
+  justify-content: space-between;
+}
+
+.hak-cipta .kebijakan {
+  display: flex;
+  gap: 24px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 32px;
+  }
+  .hero .container {
+    flex-direction: column-reverse;
+  }
+  nav .row {
+    position: absolute;
+    flex-direction: column;
+    width: 100%;
+    top: 100px;
+    left: -157px;
+    transition: all 0.3s ease;
+  }
+
+  nav .row.active {
+    left: 80px;
+  }
+
+  nav .list ul {
+    flex-direction: column;
+  }
+
+  nav .row .sign {
+    flex-direction: column;
+  }
+
+  nav .menu {
+    display: block;
+    margin-top: -10px;
+  }
+
+  .hero .desc {
+    padding: 40px;
+  }
+
+  .hero .desc p {
+    width: 100%;
+  }
+
+  .hero .desc h1 {
+    font-size: 40px;
+  }
+
+  .hero .spider {
+    margin-left: 40px;
+  }
+
+  .adv {
+    text-align: center;
+    gap: 1px;
+  }
+
+  .populer {
+    height: 150vh;
+  }
+
+  .populer h2 {
+    padding-left: 60px;
+  }
+
+  .populer .populer-month button {
+    margin-left: 10px;
+  }
+
+  .populer .card {
+    gap: 50px;
+  }
+
+  .paket {
+    height: 300vh;
+  }
+
+  footer .container {
+    flex-direction: column;
+  }
+
+  footer h3 {
+    margin-top: 20px;
+  }
 }
